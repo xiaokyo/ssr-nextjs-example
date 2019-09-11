@@ -1,5 +1,14 @@
 import React from 'react'
 
+//layout
+import Layout from './layout'
+
 export default props => {
-  return <div>home</div>
+  return (
+    <>
+      <Layout>
+        index page
+      </Layout>
+    </>
+  )
 }

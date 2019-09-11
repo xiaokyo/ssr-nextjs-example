@@ -1,5 +1,6 @@
 const fetch = require("isomorphic-unfetch")
 const { to } = require('../utils')
+const { apiPrefix } = require('_config')
 const apiObjects = require('./apis')
 const initHeaders = {}
 
@@ -17,7 +18,6 @@ const http = (url, options = {}) => {
   })
 }
 
-let apiPrefix = '/admin'//api url 前缀
 //生成api方法
 const genApis = params => {
   let url = apiPrefix + params;
