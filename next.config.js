@@ -44,6 +44,8 @@ module.exports = withCSS(withLess({
       _config: resolve('config'),
       _api: resolve("api"),
       _utils: resolve("utils"),
+      _pages: resolve('pages'),
+      _static: resolve('static')
     };
     return config;
   }

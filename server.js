@@ -26,6 +26,12 @@ app.prepare().then(() => {
     await next()
   })
 
+  server.on('error', (error) => {//忽略ECONNRESET error
+    if (error.code != 'ECONNRESET') {
+      console.log('Koa error', { error })
+    }
+  })
+
   server.use(router.routes())
   server.listen(port, () => {
     console.log(`> Ready on http://localhost:${port}`)
